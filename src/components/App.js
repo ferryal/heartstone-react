@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
 import CardCollection from './CardCollection'
+import CTAHeader from './CTAHeader'
+import NavBar from './NavBar'
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import getCardCollection from '../actions/get_card_collection'
@@ -16,8 +18,8 @@ class App extends Component {
     return (
       <Grid centered columns={1}>
         <Grid.Column>
-          {/* <InfoPanel />
-          <MenuBar /> */}
+          <CTAHeader />
+          <NavBar />
           <Image className='banner-header' src='images/banner-desktop.png' fluid/>
         </Grid.Column>
         <Grid.Column>
@@ -27,6 +29,9 @@ class App extends Component {
           <Divider section />
           <CardCollection />
         </Grid.Column>
+        <Grid.Column className='footer'>
+         <Image src='images/footer-desktop.png' />
+       </Grid.Column>
       </Grid>
     );
   }

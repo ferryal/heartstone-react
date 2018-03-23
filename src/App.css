@@ -112,6 +112,14 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+.infopanel {
+  background: #32170b !important;
+  border-radius: 0px !important;
+  height: 75px !important;
+  padding-left: 20px;
+  padding-right:20px;
+}
+
 .banner-header {
   border-bottom-right-radius: 75%;
   border-bottom-left-radius: 75%;
@@ -127,4 +135,40 @@ body{
   font-size: 15px !important;
   margin-top: 13px !important;
   margin-left: 5px !important;
+}
+
+.searchbar {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.dropdownsearch {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  background: #ff7300 !important;
+  color: #f8e7c5 !important;
+}
+
+.dropdownsearchmenu {
+  background: #5b5b5b !important;
+}
+
+.dropdownsearchitem > span {
+  color: #ffffff !important;
+}
+
+.menubar {
+  background: #472210 !important;
+  border-radius: 0px !important;
+  height: 75px !important;
+}
+
+.menu-link {
+  color: #f8e7c5 !important;
+}
+
+.footer {
+  padding: 0px !important;
+  margin: 0px !important;
+  object-fit: cover;
 }
