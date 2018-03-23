@@ -3,7 +3,7 @@
 hearthstone is a free-to-play online collectible card video game developed and published by Blizzard Entertainment
 
 
-This project build with react. You can try demo by click [here](https://sosmedku.netlify.com/)
+This project build with react. You can try demo by click [here](https://hearstone-idn.netlify.com/)
 
 If you want start in you locally, you can follow this steps :
 1. ``` git clone https://github.com/ferryal/hearthstone-react.git ```
