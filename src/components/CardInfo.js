@@ -30,7 +30,7 @@ class CardInfo extends Component {
                 </Grid.Column>
                 <Grid.Column>
                   <p className='title'>{r.name}</p>
-                  <Image  className='title' src='images/logo-sm.png' size='mini' />
+                  <Image  className='images' src='images/logo-sm.png' size='mini' centered />
                   <Divider section />
                   <div className='row3'>
                     <ul>
