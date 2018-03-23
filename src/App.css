@@ -2,42 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
 
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .rotateLeftImg {
   position:relative;
   right:25%;
   -ms-transform: rotate(-10deg); /* IE 9 */
   -webkit-transform: rotate(-10deg); /* Safari */
   transform: rotate(-10deg); /* Standard syntax */
+  /* margin-right: 50px; */
 }
 
 .rotateRightImg {
@@ -46,6 +17,7 @@
   -ms-transform: rotate(10deg); /* IE 9 */
   -webkit-transform: rotate(10deg); /* Safari */
   transform: rotate(10deg); /* Standard syntax */
+  /* margin-left: 50px; */
 }
 
 .rotateLeftImgMobile {
@@ -131,6 +103,21 @@ body{
   justify-content: center;
 }
 
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row3 ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
 .name-md {
   font-size: 15px !important;
   margin-top: 13px !important;
@@ -171,4 +158,25 @@ body{
   padding: 0px !important;
   margin: 0px !important;
   object-fit: cover;
+}
+
+.widget2 {
+    height: 200px;
+    width: 35%;
+    border: 2px solid #487eb0;
+    color: white;
+    background-color: #487eb0;
+    margin: 25px 15px auto 15px;
+    border-radius: 10px;
+}
+
+.widget1 {
+    height: 200px;
+    width: 65%;
+    border: 2px solid #487eb0;
+    color: white;
+    background-color: #487eb0;
+    margin-left: 15px;
+    margin-top: 25px;
+    border-radius: 10px;
 }

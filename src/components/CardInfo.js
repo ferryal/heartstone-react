@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import { Grid, Card, Image, Divider } from 'semantic-ui-react'
 import {bindActionCreators} from 'redux';
 import getCardInfo from '../actions/get_card_info'
+import CTAHeader from './CTAHeader'
+import NavBar from './NavBar'
 
 
 class CardInfo extends Component {
@@ -15,71 +17,35 @@ class CardInfo extends Component {
       return this.props.heroinfo.map(r => {
         return (
           <Grid.Column key={r.cardId}>
-            <Card className='borderless' fluid centered>
-              <Grid centered columns={2} padded>
-                <Grid.Column>
-                  <Card.Content textAlign='center'>
-                    <Image className='rotateRightImgDetail' src='images/Card_Back.gif' size='medium' />
-                      <Image className='rotateLeftImgDetail' src={r.img} size='medium' />
-                  </Card.Content>
+            <Grid centered columns={2} padded>
+              <Grid.Column>
+                <div className='row2'>
+                  <div className='rotateRightImg'>
+                    <Image  src='images/Card_Back.gif' size='medium' />
+                  </div>
+                  <div  className='rotateLeftImg' >
+                    <Image src={r.img} size='medium'/>
+                  </div>
+                </div>
                 </Grid.Column>
                 <Grid.Column>
-                  <Card.Content textAlign='center'>
-                    <p className='title'>{r.name}</p>
-                    <Image src='images/logo-sm.png' size='mini' />
-                    <Divider section />
-                    <p className='description'>
-                      <b>
-                        Type:
-                      </b>
-                      &nbsp;{r.type}
-                    </p>
-                    <p className='description'>
-                      <b>
-                        Class:
-                      </b>
-                      &nbsp;{r.playerClass}
-                    </p>
-                    <p className='description'>
-                      <b>
-                        Rarity:
-                      </b>
-                      &nbsp;{r.rarity}
-                    </p>
-                    <p className='description'>
-                      <b>
-                        Set:
-                      </b>
-                      &nbsp;{r.cardSet}
-                    </p>
-                    <p className='description'>
-                      <b>
-                        Race:
-                      </b>
-                      &nbsp;{r.race}
-                    </p>
-                    <p className='description'>
-                      <b>
-                        Crafting Cost:
-                      </b>
-                      &nbsp;{r.cost}
-                    </p>
-                    <p className='description'>
-                      <b>
-                        Attack:
-                      </b>
-                      &nbsp;{r.attack}
-                    </p>
-                    <p className='description'>
-                      <b>
-                        Health:
-                      </b>
-                      &nbsp;{r.health}
-                    </p>
-                  </Card.Content>
+                  <p className='title'>{r.name}</p>
+                  <Image  className='title' src='images/logo-sm.png' size='mini' />
+                  <Divider section />
+                  <div className='row3'>
+                    <ul>
+                      <li><b>Type: </b> {r.type}</li>
+                      <li><b>Class: </b> {r.playerClass}</li>
+                      <li><b>Rarity: </b> {r.rarity}</li>
+                      <li><b>Set: </b> {r.cardSet}</li>
+                      <li><b>Race: </b> {r.race}</li>
+                      <li><b>Crafting Cost: </b> {r.cost}</li>
+                      <li><b>Attack: </b> {r.attack}</li>
+                      <li><b>Health: </b> {r.health}</li>
+                    </ul>
+                  </div>
                 </Grid.Column>
               </Grid>
-            </Card>
           </Grid.Column>
         );
       });
@@ -88,6 +54,8 @@ class CardInfo extends Component {
   render() {
     return (
       <Grid centered columns={1} padded>
+        <CTAHeader />
+        <NavBar />
         {this.renderheroinfo()}
       </Grid>
     );
