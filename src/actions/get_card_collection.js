@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export default function getCardCollection() {
   return dispatch => {
-    axios.get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/Classic`, {
+    axios.get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/Blackrock Mountain`, {
       headers: {
         'X-Mashape-key': 'ykoXIKiFLwmshjhEaRG4GEuMV0Yip1XfeY1jsnMppv0TcpwIZl',
         'Accept': 'application/json'

@@ -4,6 +4,8 @@ import CardCollection from './CardCollection'
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import getCardCollection from '../actions/get_card_collection'
+import { Grid, Header, Divider, Image } from 'semantic-ui-react'
+
 
 class App extends Component {
   componentDidMount() {
@@ -12,15 +14,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <CardCollection />
-      </div>
+      <Grid centered columns={1}>
+        <Grid.Column>
+          {/* <InfoPanel />
+          <MenuBar /> */}
+          <Image className='banner-header' src='images/banner-desktop.png' fluid/>
+        </Grid.Column>
+        <Grid.Column>
+          <Header textAlign='center' size='medium'>A fast-paced strategy card game for everyone.</Header>
+          <Divider hidden />
+          <p className='title'>Cards</p>
+          <Divider section />
+          <CardCollection />
+        </Grid.Column>
+      </Grid>
     );
   }
 }

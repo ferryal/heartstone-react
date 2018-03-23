@@ -1,29 +1,47 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router-dom'
-import { Grid, Card, Image, Header, Divider } from 'semantic-ui-react'
+import { Grid, Image, Header } from 'semantic-ui-react'
+import '../App.css';
+
 
 class CardCollection extends Component {
-  // componentDidMount(){
-  //   this.props.getCardCollection();
-  // }
-
   renderHeroes() {
     if(this.props.listhero) {
       return this.props.listhero.map(r => {
         return (
-          <Grid.Column>
-            <Card className='borderless' key={r.cardId} fluid centered>
+          <Grid.Column key={r.cardId}>
+            {/* <Card className='borderless' fluid centered>
               <Card.Content textAlign='center'>
-                <Image className='rotateRightImg' src='images/cardBack.gif' size='small' />
-                <Image className='rotateLeftImg' src={r.img} size='small' />
+                <Image className='rotateRightImg' src='images/Card_Back.gif' size='small' />
+                <Link to={r.cardId}>
+                  <Image className='rotateLeftImg' src={r.img} size='small' />
+                </Link>
+                <Divider hidden />
+                <div className='row1'>
+                  <Image src='images/logo-sm.png'/>
+                  <Link to={r.cardId}>
+                    <Header className='name-md'>{r.name}</Header>
+                  </Link>
+                </div>
               </Card.Content>
-              <Card.Content extra textAlign='center'>
-                <Image src='images/logo-sm.png' size='mini' />
-                <Header size='medium'>{r.name}</Header>
-              </Card.Content>
-            </Card>
+            </Card> */}
+            <div className='borderless row1'>
+              <div className='rotateRightImg'>
+                <Image  src='images/Card_Back.gif' size='small' />
+              </div>
+              <div className='rotateLeftImg'>
+                <Link to={r.cardId}>
+                  <Image  src={r.img} size='small' />
+                </Link>
+              </div>
+            </div>
+              <div className='row1'>
+                <Image src='images/logo-sm.png'/>
+                <Link to={r.cardId}>
+                  <Header className='name-md'>{r.name}</Header>
+                </Link>
+              </div>
           </Grid.Column>
         );
       });
@@ -32,9 +50,6 @@ class CardCollection extends Component {
   render() {
     return (
       <Grid centered columns={3} padded>
-        <p className='title'>Cards</p>
-        <Header textAlign='center' size='medium'>A fast-paced strategy card game for everyone.</Header>
-        <Divider section />
         {this.renderHeroes()}
       </Grid>
     );
