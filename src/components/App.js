@@ -37,14 +37,12 @@ class App extends Component {
   }
 }
 
-//connects root reducer to props
 function mapStateToProps(state) {
   return {
     listhero: state.listhero,
   }
 }
 
-//connects redux actions to props
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     getCardCollection: getCardCollection

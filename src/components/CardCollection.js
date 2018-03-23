@@ -6,25 +6,25 @@ import '../App.css';
 
 
 class CardCollection extends Component {
-  renderHeroes() {
+  renderHero() {
     if(this.props.listhero) {
-      return this.props.listhero.map(r => {
+      return this.props.listhero.map(card => {
         return (
-          <Grid.Column key={r.cardId}>
+          <Grid.Column key={card.cardId}>
             <div className='borderless row1'>
               <div className='rotateRightImg'>
                 <Image  src='images/Card_Back.gif' size='small' />
               </div>
               <div className='rotateLeftImg'>
-                <Link to={r.cardId}>
-                  <Image  src={r.img} size='small' />
+                <Link to={card.cardId}>
+                  <Image  src={card.img} size='small' />
                 </Link>
               </div>
             </div>
               <div className='row1'>
                 <Image src='images/logo-sm.png'/>
-                <Link to={r.cardId}>
-                  <Header className='name-md'>{r.name}</Header>
+                <Link to={card.cardId}>
+                  <Header className='name-md'>{card.name}</Header>
                 </Link>
               </div>
           </Grid.Column>
@@ -35,13 +35,12 @@ class CardCollection extends Component {
   render() {
     return (
       <Grid centered columns={3} padded>
-        {this.renderHeroes()}
+        {this.renderHero()}
       </Grid>
     );
   }
 }
 
-//connects root reducer to props
 function mapStateToProps(state) {
   return {
     listhero: state.listhero
