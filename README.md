@@ -2,32 +2,32 @@
 
 hearthstone is a free-to-play online collectible card video game developed and published by Blizzard Entertainment
 
+
+This project build with react. You can try demo by click [here](https://sosmedku.netlify.com/)
+
+If you want start in you locally, you can follow this steps :
+1. ``` git clone https://github.com/ferryal/hearthstone-react.git ```
+2. ``` cd sosmed-react ```
+3. ``` npm install ``` or ``` yarn install ```
+4. ``` npm start ``` or ``` yarn start ```
+5. ``` Local: http://localhost:3000/ ``` or ``` On Your Network:  http://192.168.0.106:3000/ ```
+
+
 ### objective:
 * create a card collection list
-* card detail ``` https://omgvamp-hearthstone-v1.p.mashape.com/cards/{name} ```
+* card detail
 * use hearthstoneapi for getting the card list, detail, and other assets like backcard & images
-
-<!-- ### assets:
-* kindly check mobile.psd, desktop.psd & fonts folder
 
 ### api & documentation:
 * http://hearthstoneapi.com/
 
-### requirement:
-* use reactjs, react-router & redux
-* use reactive programming
-* responsive
-* cross browser
+#### Tech Stack
+1. React js
+2. React router dom
+3. Axios
+4. Redux
+5. Redux Thunk
+6. Node js
 
-### output:
-* deploy project (now.sh is fine)
-* complete source code (zipped) -->
-
-
-Redux fundamentals
-
-4steps
-1.store [reducer, state]
-2.reducer[agent[state, action]]
-3.subscribe[getting connected to the base]
-4.dispatch[like some action is being sent to the james bond]
+### Styling
+1. React semantic ui
